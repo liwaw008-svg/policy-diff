@@ -1,0 +1,32 @@
+{
+  "policyId": "PD-1788540658",
+  "transactions": {
+    "propose": "0x75afc1e3aec18a69e5bbcfe09fde9b82b3fd390df329030cdd9058f448195150",
+    "finalize": "0x05cd3d0682f03744934bbd1946685be4169eeb42caf6eb854a38ef2a9daf68d3"
+  },
+  "state": {
+    "changes": {
+      "added": [],
+      "ambiguities": [
+        "v0 'Records must be retained' lacks an explicit subject; subject is inferred from context",
+        "v0 records retention requirement has no clause number, so its relationship to v1 Clause 8 cannot be conclusively mapped",
+        "v1 does not explicitly state whether the 2027-01-01 effective date applies to all clauses or only new Clause 8"
+      ],
+      "effectiveDate": "2027-01-01",
+      "modified": [
+        "{'action': 'must be retained for five years', 'change': 'retention period changed from two years to five years; clause assignment added in new version', 'clause': 'Clause 8', 'deadline': '2027-01-01', 'subject': 'records'}",
+        "{'action': 'submit incident reports quarterly', 'change': 'frequency changed from annual to quarterly', 'clause': 'Clause 4', 'deadline': '2027-01-01', 'subject': 'regulated operators'}"
+      ],
+      "newDigest": "2ee88df1e46cdfa56d560233640777177666d03582b43a0d997f16964bfa1de4",
+      "oldDigest": "09708a645c91fcb1ac09501d22c6d0ac3b32448f5cd44d2967398c6c3735e661",
+      "removed": []
+    },
+    "newUrl": "https://raw.githubusercontent.com/liwaw008-svg/policy-diff/d5f302a461c1fa684893cdfa0c9376ac6303f8c7/examples/versions/policy-v2.txt",
+    "oldUrl": "https://raw.githubusercontent.com/liwaw008-svg/policy-diff/d5f302a461c1fa684893cdfa0c9376ac6303f8c7/examples/versions/policy-v1.txt",
+    "owner": "0x05C0cc3F433F6e296f18117f558FdB9043434793",
+    "policyId": "PD-1788540658",
+    "previousDigest": "",
+    "sequence": 1,
+    "state": "FINAL"
+  }
+}

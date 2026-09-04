@@ -53,4 +53,4 @@ Unknown IDs, repeated proposals, missing predecessors and unauthorized finalizat
 
 [Interface source](versioning/contract.py) · [Lineage and adversarial tests](specs/direct/test_contract.py)
 
-Deployment and network-run files are generated after execution; use the paths referenced above to inspect the current evidence.
+[Version contract](https://explorer-studio.genlayer.com/address/0xffe928c872a9a2550F534f11a6969693A2870c1f) — [creation transaction](https://explorer-studio.genlayer.com/tx/0x155bab7ecf8a176ee038921461ec98d043b8cf9efbdf728adbf436777514f765). The recorded source revision is `d5f302a`.
