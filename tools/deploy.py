@@ -2,6 +2,7 @@ import json,re,subprocess
 from pathlib import Path
 from genlayer_py import create_client,create_account
 from genlayer_py.chains import studionet
+from genlayer_py.types import TransactionStatus
 ROOT=Path(__file__).parents[1]
 ENV=(ROOT.parents[3]/'accounts.env').read_text()
 def secret():return re.search(r'^ACCOUNT_4_GENLAYER_PRIVATE_KEY\s*=\s*"?([^"\r\n]+)',ENV,re.M).group(1).strip()
@@ -23,7 +24,7 @@ def main():
  code=(ROOT/"versioning/contract.py").read_text()
  tx=client.deploy_contract(code=code,args=[])
  print('deploy',tx,flush=True)
- receipt=client.wait_for_transaction_receipt(transaction_hash=tx,status='ACCEPTED',retries=120,interval=10000)
+ receipt=client.wait_for_transaction_receipt(transaction_hash=tx,status=TransactionStatus.ACCEPTED,retries=120,interval=10000)
  info=client.get_transaction(transaction_hash=tx)
  contract=address(receipt)
  if not contract or info.get('status_name')!='ACCEPTED' or not any(r.get('execution_result')=='SUCCESS' for r in info.get('consensus_data',{}).get('leader_receipt',[])):
